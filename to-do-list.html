@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html ng-app="todoApp">
+<head>
+  <title>#to-do-list</title>
+  <!-- MaterializeCss -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+   <!-- Angular.JS -->
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+  <script src="js/app.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="css/animate.css">
+
+
+
+
+
+
+
+  <nav>
+    <div class="nav-wrapper">
+      <a href="http://www.forbes.com/forbes/welcome/" class="brand-logo green animated infinite bounce">The steps to becoming a billionare</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+     
+      </ul>
+    </div>
+  </nav>
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body ng-controller="TodoListController as todoList">
+<center><img src class="" ="https://media.giphy.com/media/LkAE4C5sxYCHe/giphy.gif"></center>
+<img  src="https://ioneglobalgrind.files.wordpress.com/2014/01/shutupimrich_zps71a53425.gif?w=600&h=356">
+ <center> <main>
+  <div class="container">
+    <div class="row">
+      <div class="col s6">
+        <center><h2 class=" col 10 blue"><i>Guide to Life<i/> #to-do-list<h2/></center>
+        <div class="row">
+          <div class="input-field col s6">
+            <center><form id="add-form" ng-submit="todoList.addTodo()"></center>
+             <center> <input ng-model="todoList.todoText" id="task" type="text" class="validate"></center>
+              <center><label class="active" for="task">More Stuff</label></center>
+             <center> <button class="btn green" type="submit">+</button></center>
+                <center>  <button ng-click="todoList.remove()" class="waves-btn blue">      <i class="material-icons">delete</i></button></center> 
+            </form>
+          </div>
+        </div>
+        <span>{{ todoList.remaining() }} of {{ todoList.todoItems.length }} remaining</span>
+        <ul>
+              <li ng-repeat="todo in todoList.todoItems">
+            <p>
+              <input type="checkbox" ng-model="todo.done" id="todoItem-{{ $index }}" />
+              <label class="done-{{ todo.done }}" for="todoItem-{{ $index }}">{{ todo.name }}</label>
+
+            </p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  </main>  </center> 
+ <div class="carousel">
+    <a class="carousel-item" href="#one!"><img src="http://www.bodylovewellness.com/wp-content/uploads/2011/10/Report-Card-Diet-School-Dropout.jpg"></a>
+    <a class="carousel-item" href="#two!"><img src="http://cdn-media-1.lifehack.org/wp-content/files/2013/09/11-Reasons-Why-Its-Important-to-Follow-Your-Dreams.jpg"></a>
+    <a class="carousel-item" href="#three!"><img src="http://ce85d19d27bcd4580648-f08455577a10cebd8677ed53887ae045.r1.cf2.rackcdn.com/A5B1273C-367C-4CE2-B0CE-5C1B0FD5A309.jpg"></a>
+    <a class="carousel-item" href="#four!"><img src="https://i.ytimg.com/vi/DIFRMHkrtM4/hqdefault.jpg"></a>
+    <a class="carousel-item" href="#five!"><img src="https://www.overthinkingit.com/wp-content/uploads/2014/03/imrich.gif"></a>
+  </div>
+
+
+  </div>
+      
+
+    <div class="parallax-container">
+      <div class="parallax animated infinite bounce "><img src="http://images.huffingtonpost.com/2013-08-23-tumblr_m08celcrnT1r3isxuo1_500.gif"></div>
+    </div>
+    <div class="parallax-container">
+      <div class="parallax animated infinite flash "><img src="http://community.cc/wp-content/uploads/2015/06/money-tree.jpg"></div>
+    </div>
+        
+        
+
+
+
+
+    <center> <div class="row">
+        <div class="col 7 m7">
+          <div class="card  teal accent-3 responsive-img animate-on-mouseenter">
+            <div class="card-image">
+              <img src="http://rdcnewscdn.realtor.com/wp-content/uploads/2015/09/working-hard.jpg">
+              <span class="card-title  teal accent-3">Card Title</span>
+            </div>
+            <div class="card-content">
+              <p>Work it's that simple</p>
+            </div>
+            <div class="card-action  teal accent-3 ">
+              <a href="http://www.forbes.com/forbes/welcome/">This is a link</a>
+            </div>
+          </div>
+        </div>
+      </div></center>
+<center><img src="https://a.disquscdn.com/get?url=http%3A%2F%2Fimages.rapgenius.com%2F0c783ab9de02019432add100bac82051.500x200x15.gif&key=y5Lt_brqWbjvJWwnqycVNw"></center>
+  <!-- jQUery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+  <!-- Materialize Javascript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+  <script type="text/javascript" src="js/scripts.js"></script>
+</body>
+</html>
+
+ 
